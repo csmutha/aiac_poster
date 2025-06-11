@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Architect Club - Theme Gallery</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .main-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .theme-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .theme-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .theme-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .theme-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .theme-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .theme-description {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+        
+        .theme-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        
+        .theme-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .original-link {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .original-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+        }
+        
+        .original-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 107, 107, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+            }
+            
+            .themes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .theme-card {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">AI Architect Club</h1>
+            <p class="subtitle">Choose Your Perfect Theme</p>
+        </div>
+        
+        <div class="themes-grid">
+            <div class="theme-card">
+                <span class="theme-icon">🌐</span>
+                <h3 class="theme-title">Original Theme</h3>
+                <p class="theme-description">The original futuristic design with holographic elements, animated sphere, and cyber aesthetics.</p>
+                <a href="../index.html" class="theme-btn">View Original</a>
+            </div>
+            
+            <div class="theme-card">
+                <span class="theme-icon">🔴</span>
+                <h3 class="theme-title">Matrix Theme</h3>
+                <p class="theme-description">Green on black cyberpunk style with falling matrix rain effect and terminal aesthetics.</p>
+                <a href="matrix-theme.html" class="theme-btn">View Matrix</a>
+            </div>
+            
+            <div class="theme-card">
+                <span class="theme-icon">🌈</span>
+                <h3 class="theme-title">Synthwave Theme</h3>
+                <p class="theme-description">Retro 80s inspired with neon colors, gradient borders, and synthwave grid backgrounds.</p>
+                <a href="synthwave-theme.html" class="theme-btn">View Synthwave</a>
+            </div>
+            
+            <div class="theme-card">
+                <span class="theme-icon">🤍</span>
+                <h3 class="theme-title">Minimalist Theme</h3>
+                <p class="theme-description">Clean, modern design with subtle shadows, plenty of whitespace, and professional typography.</p>
+                <a href="minimalist-theme.html" class="theme-btn">View Minimalist</a>
+            </div>
+            
+            <div class="theme-card">
+                <span class="theme-icon">⚫</span>
+                <h3 class="theme-title">Dark Professional</h3>
+                <p class="theme-description">Elegant dark theme with glass morphism effects, subtle grids, and premium aesthetics.</p>
+                <a href="dark-professional-theme.html" class="theme-btn">View Dark Pro</a>
+            </div>
+            
+            <div class="theme-card">
+                <span class="theme-icon">🎨</span>
+                <h3 class="theme-title">Gradient Modern</h3>
+                <p class="theme-description">Vibrant gradient backgrounds with animated colors, glass effects, and modern typography.</p>
+                <a href="gradient-modern-theme.html" class="theme-btn">View Gradient</a>
+            </div>
+        </div>
+        
+        <div class="original-link">
+            <h3 style="margin-bottom: 20px;">Main Website</h3>
+            <a href="https://csmutha.github.io/aiac_poster/" class="original-btn" target="_blank">
+                Visit Official Site
+            </a>
+        </div>
+    </div>
+</body>
+</html>
