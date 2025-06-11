@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Architect Club - Matrix Theme</title>
+    
+    <!-- Meta tags for WhatsApp and social media sharing -->
+    <meta name="description" content="Fast-track your AI career with comprehensive real-world case studies. AI Architect Competency in One Month. Learn, Build & Innovate!">
+    <meta name="keywords" content="AI, Artificial Intelligence, Machine Learning, AI Course, AI Training, AI Architect, GenAI, AI Competency">
+    <meta name="author" content="AI Architect Club">
+    
+    <!-- Open Graph Meta Tags for WhatsApp/Facebook -->
+    <meta property="og:title" content="AI Architect Club - AI Competency in One Month">
+    <meta property="og:description" content="Fast-track your AI career with comprehensive real-world case studies. Master GenAI applications, Complete working AI setup on your local machine, and become a confident AI leader.">
+    <meta property="og:image" content="https://csmutha.github.io/aiac_poster/aiac_logo.jpeg">
+    <meta property="og:image:alt" content="AI Architect Club Logo">
+    <meta property="og:url" content="https://csmutha.github.io/aiac_poster/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AI Architect Club">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono:wght@400&family=Orbitron:wght@400;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Share Tech Mono', monospace;
+            background: #000;
+            color: #00ff00;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Matrix Rain Animation */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+        }
+        
+        .matrix-column {
+            position: absolute;
+            top: -100px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 14px;
+            color: #00ff00;
+            animation: matrixFall linear infinite;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            padding: 20px;
+        }
+        
+        .hero-container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid #00ff00;
+            border-radius: 0;
+            padding: 40px;
+            box-shadow: 
+                0 0 20px #00ff00,
+                inset 0 0 20px rgba(0, 255, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            position: relative;
+        }
+        
+        .hero-container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00ff00, #008800, #00ff00);
+            z-index: -1;
+            animation: borderPulse 2s ease-in-out infinite;
+        }
+        
+        .logo-container {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            position: relative;
+            border: 2px solid #00ff00;
+            box-shadow: 0 0 30px #00ff00;
+            animation: logoGlow 2s ease-in-out infinite alternate;
+        }
+        
+        .logo-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: sepia(100%) hue-rotate(90deg) brightness(1.2);
+        }
+        
+        .main-title {
+            font-family: 'Orbitron', monospace;
+            font-weight: 900;
+            font-size: 3.5rem;
+            color: #00ff00;
+            margin: 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 
+                0 0 10px #00ff00,
+                0 0 20px #00ff00,
+                0 0 30px #00ff00;
+            animation: textGlow 2s ease-in-out infinite alternate;
+        }
+        
+        .competency-title {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.5rem;
+            color: #00ff00;
+            margin: 20px 0;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #00ff00;
+        }
+        
+        .subtitle {
+            color: #88ff88;
+            margin-top: 15px;
+            letter-spacing: 2px;
+        }
+        
+        /* Terminal-style sections */
+        .content-section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-family: 'Share Tech Mono', monospace;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .feature-column {
+            background: #000;
+            border: 1px solid #00ff00;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+        }
+        
+        .feature-column::before {
+            content: "> LOADING MODULE...";
+            display: block;
+            color: #008800;
+            margin-bottom: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            color: #00ff00;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item::before {
+            content: "✓ ";
+            color: #00ff00;
+            margin-right: 10px;
+            animation: blink 1s infinite;
+        }
+        
+        .feature-item:hover {
+            background: rgba(0, 255, 0, 0.1);
+            padding-left: 10px;
+        }
+        
+        .contact-section {
+            background: #000;
+            border: 2px solid #00ff00;
+            padding: 40px;
+            margin: 60px 0;
+            text-align: center;
+            box-shadow: 0 0 20px #00ff00;
+        }
+        
+        .contact-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            color: #00ff00;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px #00ff00;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 30px;
+            background: #000;
+            border: 2px solid #00ff00;
+            color: #00ff00;
+            text-decoration: none;
+            font-family: 'Share Tech Mono', monospace;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        
+        .contact-btn:hover {
+            background: #00ff00;
+            color: #000;
+            box-shadow: 0 0 20px #00ff00;
+        }
+        
+        /* Animations */
+        @keyframes matrixFall {
+            0% {
+                transform: translateY(-100vh);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes borderPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        @keyframes logoGlow {
+            from { box-shadow: 0 0 20px #00ff00; }
+            to { box-shadow: 0 0 40px #00ff00, 0 0 60px #00ff00; }
+        }
+        
+        @keyframes textGlow {
+            from { text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; }
+            to { text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00; }
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+                letter-spacing: 3px;
+            }
+            .hero-container {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Matrix Background -->
+    <div class="matrix-bg" id="matrixBg"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="logo-container">
+                <img src="../aiac_logo.jpeg" alt="AI Architect Club Logo" class="logo-image">
+            </div>
+            
+            <h1 class="main-title">AI Architect<br>Club</h1>
+            
+            <h2 class="competency-title">Gain GenAI Architect Competency<br>in One Month</h2>
+            
+            <div class="subtitle">Professional Learning Environment</div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="features-grid">
+            <div class="feature-column">
+                <div class="feature-item">Auto-detect PII Data Leakage</div>
+                <div class="feature-item">On-Demand Root Cause Analysis</div>
+                <div class="feature-item">Credit Card Fraud Prevention</div>
+                <div class="feature-item">AI-Powered Dynamic Code Generation</div>
+                <div class="feature-item">Agentic Interactive Video Analyzer</div>
+            </div>
+            
+            <div class="feature-column">
+                <div class="feature-item">5 Focused GenAI Applications</div>
+                <div class="feature-item">MIT Certified Instructor Led Program</div>
+                <div class="feature-item">Complete working AI setup on your local machine</div>
+                <div class="feature-item">Batch starts Jun 21</div>
+                <div class="feature-item">Limits to 10 participants</div>
+            </div>
+        </div>
+        
+        <div class="contact-section">
+            <h3 class="contact-title">INITIALIZE CONTACT PROTOCOL</h3>
+            <div class="contact-buttons">
+                <a href="https://wa.me/919686694142" class="contact-btn" target="_blank">
+                    <span>📱</span>
+                    WHATSAPP: +919686694142
+                </a>
+                <a href="mailto:aiarchitectclub@gmail.com" class="contact-btn">
+                    <span>✉️</span>
+                    EMAIL: aiarchitectclub@gmail.com
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Matrix Rain Effect
+        function createMatrixRain() {
+            const matrixBg = document.getElementById('matrixBg');
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()';
+            
+            for (let i = 0; i < 50; i++) {
+                const column = document.createElement('div');
+                column.className = 'matrix-column';
+                column.style.left = Math.random() * 100 + '%';
+                column.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                column.style.animationDelay = Math.random() * 2 + 's';
+                
+                let text = '';
+                for (let j = 0; j < 20; j++) {
+                    text += chars[Math.floor(Math.random() * chars.length)] + '<br>';
+                }
+                column.innerHTML = text;
+                
+                matrixBg.appendChild(column);
+            }
+        }
+        
+        // Initialize matrix effect
+        createMatrixRain();
+        
+        // Refresh matrix every 10 seconds
+        setInterval(() => {
+            document.getElementById('matrixBg').innerHTML = '';
+            createMatrixRain();
+        }, 10000);
+    </script>
+</body>
+</html>

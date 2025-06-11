@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Architect Club - Minimalist Theme</title>
+    
+    <!-- Meta tags for WhatsApp and social media sharing -->
+    <meta name="description" content="Fast-track your AI career with comprehensive real-world case studies. AI Architect Competency in One Month. Learn, Build & Innovate!">
+    <meta name="keywords" content="AI, Artificial Intelligence, Machine Learning, AI Course, AI Training, AI Architect, GenAI, AI Competency">
+    <meta name="author" content="AI Architect Club">
+    
+    <!-- Open Graph Meta Tags for WhatsApp/Facebook -->
+    <meta property="og:title" content="AI Architect Club - AI Competency in One Month">
+    <meta property="og:description" content="Fast-track your AI career with comprehensive real-world case studies. Master GenAI applications, Complete working AI setup on your local machine, and become a confident AI leader.">
+    <meta property="og:image" content="https://csmutha.github.io/aiac_poster/aiac_logo.jpeg">
+    <meta property="og:image:alt" content="AI Architect Club Logo">
+    <meta property="og:url" content="https://csmutha.github.io/aiac_poster/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AI Architect Club">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .hero-container {
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        .logo-container {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .logo-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .main-title {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+        
+        .competency-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #475569;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+            color: #64748b;
+            font-weight: 400;
+        }
+        
+        /* Content Section */
+        .content-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+        
+        .feature-column {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-column:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            padding: 16px 0;
+            color: #334155;
+            font-weight: 500;
+            border-bottom: 1px solid #f1f5f9;
+            transition: all 0.2s ease;
+        }
+        
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-item::before {
+            content: "✓";
+            color: #10b981;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-right: 16px;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ecfdf5;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        
+        .feature-item:hover {
+            color: #1e293b;
+            transform: translateX(8px);
+        }
+        
+        .contact-section {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 40px;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: #1e293b;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(30, 41, 59, 0.2);
+        }
+        
+        .contact-btn:hover {
+            background: #334155;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(30, 41, 59, 0.3);
+        }
+        
+        .contact-btn.secondary {
+            background: #ffffff;
+            color: #1e293b;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .contact-btn.secondary:hover {
+            background: #f8fafc;
+            border-color: #cbd5e1;
+        }
+        
+        .contact-icon {
+            font-size: 1.25rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .feature-column {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        .feature-column:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .competency-title {
+                font-size: 1.25rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .feature-column {
+                padding: 30px 20px;
+            }
+            
+            .contact-section {
+                padding: 40px 20px;
+            }
+            
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 20px;
+            }
+            
+            .main-title {
+                font-size: 2rem;
+            }
+            
+            .logo-container {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="logo-container">
+                <img src="../aiac_logo.jpeg" alt="AI Architect Club Logo" class="logo-image">
+            </div>
+            
+            <h1 class="main-title">AI Architect Club</h1>
+            
+            <h2 class="competency-title">Gain GenAI Architect Competency in One Month</h2>
+            
+            <div class="subtitle">Professional Learning Environment</div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="features-grid">
+            <div class="feature-column">
+                <div class="feature-item">Auto-detect PII Data Leakage</div>
+                <div class="feature-item">On-Demand Root Cause Analysis</div>
+                <div class="feature-item">Credit Card Fraud Prevention</div>
+                <div class="feature-item">AI-Powered Dynamic Code Generation</div>
+                <div class="feature-item">Agentic Interactive Video Analyzer</div>
+            </div>
+            
+            <div class="feature-column">
+                <div class="feature-item">5 Focused GenAI Applications</div>
+                <div class="feature-item">MIT Certified Instructor Led Program</div>
+                <div class="feature-item">Complete working AI setup on your local machine</div>
+                <div class="feature-item">Batch starts Jun 21</div>
+                <div class="feature-item">Limits to 10 participants</div>
+            </div>
+        </div>
+        
+        <div class="contact-section">
+            <h3 class="contact-title">Get Started</h3>
+            <div class="contact-buttons">
+                <a href="https://wa.me/919686694142" class="contact-btn" target="_blank">
+                    <span class="contact-icon">📱</span>
+                    WhatsApp
+                </a>
+                <a href="mailto:aiarchitectclub@gmail.com" class="contact-btn secondary">
+                    <span class="contact-icon">✉️</span>
+                    Email Us
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
