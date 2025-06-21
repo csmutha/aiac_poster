@@ -1,709 +1,458 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Architect Club - Build Your Future</title>
-    
-    <!-- Meta tags for WhatsApp and social media sharing -->
-    <meta name="description" content="Fast-track your AI career with comprehensive real-world case studies. AI Architect Competency in One Month. Learn, Build & Innovate!">
-    <meta name="keywords" content="AI, Artificial Intelligence, Machine Learning, AI Course, AI Training, AI Architect, GenAI, AI Competency">
-    <meta name="author" content="AI Architect Club">
-    
-    <!-- Open Graph Meta Tags for WhatsApp/Facebook -->
-    <meta property="og:title" content="AI Architect Club - AI Competency in One Month">
-    <meta property="og:description" content="Fast-track your AI career with comprehensive real-world case studies. Master GenAI applications, Complete working AI setup on your local machine, and become a confident AI leader.">
-    <meta property="og:image" content="https://csmutha.github.io/aiac_poster/logo.png">
-    <meta property="og:image:alt" content="AI Architect Club Logo">
-    <meta property="og:url" content="https://csmutha.github.io/aiac_poster/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="AI Architect Club">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI Architect Club - AI Competency in One Month">
-    <meta name="twitter:description" content="Fast-track your AI career with comprehensive real-world case studies. Learn, Build & Innovate!">
-    <meta name="twitter:image" content="https://csmutha.github.io/aiac_poster/logo.png">
-    
-    <!-- WhatsApp specific meta tags -->
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="theme-color" content="#00d4ff">
+    <title>Infographic: A Blueprint for India's Future-Forward Online School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-            color: white;
-            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
         }
-        
-        /* Hero Section */
-        .hero-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .chart-container {
             position: relative;
-            padding: 20px;
-        }
-        
-        .hero-container {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            max-width: 800px;
             width: 100%;
-            transition: transform 0.3s ease;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
         }
-        
-        .hero-container:hover {
-            transform: translateY(-5px);
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 384px;
+            }
         }
-        
-        .ai-sphere-logo {
-            width: 200px;
-            height: 200px;
-            margin: 20px auto;
-            position: relative;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .ai-sphere-logo:hover {
-            transform: scale(1.1);
-        }
-        
-        .sphere {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, 
-                rgba(255, 255, 255, 0.3) 0%,
-                rgba(0, 212, 255, 0.4) 30%,
-                rgba(139, 0, 139, 0.6) 60%,
-                rgba(220, 20, 60, 0.8) 100%);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 
-                0 0 30px rgba(0, 212, 255, 0.5),
-                inset 0 0 30px rgba(255, 255, 255, 0.1);
-            animation: sphereGlow 2s ease-in-out infinite alternate;
-        }
-        
-        .sphere::before {
-            content: '';
-            position: absolute;
-            top: 20%;
-            left: 20%;
-            width: 60%;
-            height: 60%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
-            border-radius: 50%;
-            transform: rotate(-30deg);
-        }
-        
-        .network-lines {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                conic-gradient(from 0deg, transparent 0deg, rgba(0, 212, 255, 0.3) 90deg, transparent 180deg),
-                conic-gradient(from 90deg, transparent 0deg, rgba(255, 255, 255, 0.2) 90deg, transparent 180deg),
-                conic-gradient(from 180deg, transparent 0deg, rgba(0, 212, 255, 0.2) 90deg, transparent 180deg);
-            border-radius: 50%;
-            animation: rotate 10s linear infinite;
-        }
-        
-        .ai-symbol {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 60px;
-            color: white;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-            z-index: 10;
-        }
-        
-        .hologram-base {
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 250px;
-            height: 20px;
-            background: radial-gradient(ellipse, rgba(0, 212, 255, 0.4) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        .tagline {
-            font-family: 'Orbitron', monospace;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: #00d4ff;
-            margin-bottom: 20px;
-            letter-spacing: 3px;
-            animation: slideInFromLeft 1s ease;
-        }
-        
-        .main-title {
-            font-family: 'Orbitron', monospace;
-            font-weight: 900;
-            font-size: 3.5rem;
-            background: linear-gradient(45deg, #00d4ff, #ff6b35, #f7931e, #00d4ff);
-            background-size: 300% 300%;
+        .gradient-text {
+            background: linear-gradient(to right, #665191, #d45087, #ffa600);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradient 3s ease infinite;
-            margin: 20px 0;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            line-height: 1.2;
         }
-        
-        .competency-title {
-            font-family: 'Orbitron', monospace;
-            font-weight: 700;
-            font-size: 2rem;
-            color: #00d4ff;
-            margin: 20px 0;
-            letter-spacing: 2px;
-            animation: slideInFromRight 1s ease;
+        .kpi-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border-left: 5px solid #ffa600;
         }
-        
-        .subtitle {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 300;
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.8);
-            margin-top: 15px;
-            letter-spacing: 2px;
-        }
-        
-        .description {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin: 20px 0;
-            line-height: 1.6;
-        }
-        
-        .professional-environment {
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.7);
-            margin: 20px 0;
-            font-style: italic;
-        }
-        
-        /* Content Section */
-        .content-section {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 0;
-        }
-        
-        .feature-column {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.8s ease;
-        }
-        
-        .feature-column:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0, 212, 255, 0.2);
-            border-color: rgba(0, 212, 255, 0.3);
-        }
-        
-        .feature-item {
+        .flow-step {
             display: flex;
             align-items: center;
-            margin: 15px 0;
-            padding: 10px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
         }
-        
-        .feature-item:hover {
-            background: rgba(0, 212, 255, 0.1);
-            transform: translateX(10px);
-        }
-        
-        .feature-item::before {
-            content: "✓";
-            color: #00d4ff;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-right: 15px;
-            background: rgba(0, 212, 255, 0.2);
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .highlight-section {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            margin: 60px 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            animation: fadeIn 1s ease;
-        }
-        
-        .highlight-title {
-            font-family: 'Orbitron', monospace;
+        .flow-arrow {
+            color: #a05195;
             font-size: 2rem;
-            color: #00d4ff;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        
-        .highlights-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .highlight-item {
-            background: rgba(0, 212, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0, 212, 255, 0.2);
-        }
-        
-        .highlight-item:hover {
-            background: rgba(0, 212, 255, 0.2);
-            transform: scale(1.05);
-        }
-        
-        .contact-section {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            margin: 60px 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
-        }
-        
-        .contact-title {
-            font-family: 'Orbitron', monospace;
-            font-size: 2rem;
-            color: #00d4ff;
-            margin-bottom: 30px;
-        }
-        
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-
-        .logo-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid rgba(0, 212, 255, 0.5);
-            box-shadow:
-                0 0 30px rgba(0, 212, 255, 0.5),
-                inset 0 0 30px rgba(255, 255, 255, 0.1);
-            animation: logoGlow 2s ease-in-out infinite alternate;
-        }
-        
-        .contact-btn {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px 30px;
-            background: linear-gradient(45deg, #00d4ff, #0099cc);
-            border: none;
-            border-radius: 50px;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
-        }
-        
-        .contact-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 212, 255, 0.5);
-            background: linear-gradient(45deg, #ff6b35, #f7931e);
-        }
-        
-        .contact-icon {
-            font-size: 1.5rem;
-        }
-        
-        /* Animations */
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-        
-        @keyframes sphereGlow {
-            from {
-                box-shadow: 
-                    0 0 30px rgba(0, 212, 255, 0.5),
-                    inset 0 0 30px rgba(255, 255, 255, 0.1);
-            }
-            to {
-                box-shadow: 
-                    0 0 50px rgba(0, 212, 255, 0.8),
-                    0 0 80px rgba(220, 20, 60, 0.4),
-                    inset 0 0 50px rgba(255, 255, 255, 0.2);
-            }
-        }
-        
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-        
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        @keyframes slideInFromLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        @keyframes slideInFromRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        @keyframes fall {
-            0% {
-                transform: translateY(-100vh) rotate(0deg);
-            }
-            100% {
-                transform: translateY(100vh) rotate(360deg);
-            }
-        }
-        
-        @keyframes energyBurst {
-            0% {
-                transform: translate(0, 0) scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: translate(calc(var(--endX) - 50vw), calc(var(--endY) - 50vh)) scale(0);
-                opacity: 0;
-            }
-        }
-        
-        /* Decorative Elements */
-        .decorative-line {
-            width: 200px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #00d4ff, transparent);
-            margin: 30px auto;
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 0.5;
-                transform: scaleX(1);
-            }
-            50% {
-                opacity: 1;
-                transform: scaleX(1.1);
-            }
-        }
-        
-        .tech-elements {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-family: 'Orbitron', monospace;
-            font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.3);
-            line-height: 1.5;
-        }
-        
-        .circuit-pattern {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            width: 100px;
-            height: 50px;
-            opacity: 0.1;
-            background: 
-                linear-gradient(90deg, #00d4ff 1px, transparent 1px),
-                linear-gradient(0deg, #00d4ff 1px, transparent 1px);
-            background-size: 10px 10px;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .ai-sphere-logo {
-                font-size: 60px;
-            }
-            .main-title {
-                font-size: 2.5rem;
-                letter-spacing: 2px;
-            }
-            .competency-title {
-                font-size: 1.5rem;
-            }
-            .hero-container {
-                padding: 30px 20px;
-                margin: 10px;
-            }
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            .contact-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
+            margin: 0 1rem;
         }
     </style>
 </head>
-<body>
-    <!-- Hero Section -->
-    <section class="hero-section">
-        
-        
-        <div class="circuit-pattern"></div>
-        
-        <div class="hero-container">
-            <!-- <div class="tagline">AI Architect Club</div> -->
-            
-            <div class="ai-sphere-logo" onclick="celebrate()">
-                <div class="hologram-base"></div>
-                <div class="sphere">
-                    <div class="network-lines"></div>
-                    <div class="ai-symbol"><img src="aiac_logo.jpeg" alt="AI Architect Club Logo" class="logo-image"></div>
+<body class="text-gray-800">
+
+    <div class="bg-[#003f5c] text-white py-4 text-center">
+        <div class="container mx-auto px-4">
+            <p class="text-lg font-semibold mb-2">Audio Overview: A Brief Introduction</p>
+            <audio id="audioOverview" controls class="mx-auto w-full max-w-lg rounded-lg shadow-md">
+                <!-- Replace with actual audio source if available -->
+                <source src="audio-overview.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p class="text-sm mt-2 text-gray-300">"Why did the chicken cross the road?"</p>
+            <p class="text-xs text-gray-400 mt-1">
+                Note: This is a placeholder audio track.
+            </p>
+        </div>
+    </div>
+
+    <main class="container mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-black text-[#003f5c] tracking-tight leading-tight">A New Dawn for Indian Education</h1>
+            <p class="mt-4 text-lg md:text-xl text-[#2f4b7c] max-w-3xl mx-auto">Leveraging AI and a flexible workforce to build a high-quality, fully online school that transcends geographical and economic barriers across India.</p>
+        </header>
+
+        <section id="vision" class="mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="kpi-card">
+                    <div class="text-4xl mb-2">🏫</div>
+                    <h3 class="text-xl font-bold text-[#003f5c] mb-2">100% Online Campus</h3>
+                    <p class="text-gray-600">Eliminating the need for physical infrastructure to deliver education to the most remote corners of the nation.</p>
+                </div>
+                <div class="kpi-card">
+                    <div class="text-4xl mb-2">🧑‍🏫</div>
+                    <h3 class="text-xl font-bold text-[#003f5c] mb-2">Gig-Economy Teachers</h3>
+                    <p class="text-gray-600">Harnessing a diverse, nationwide talent pool of educators with a flexible and performance-driven employment model.</p>
+                </div>
+                <div class="kpi-card">
+                    <div class="text-4xl mb-2">🧠</div>
+                    <h3 class="text-xl font-bold text-[#003f5c] mb-2">AI-Powered Core</h3>
+                    <p class="text-gray-600">Integrating Artificial Intelligence to personalize learning, automate tasks, and ensure quality at scale.</p>
                 </div>
             </div>
-            
-            <h1 class="main-title">AI Architect<br>Club</h1>
-            
-            <div class="decorative-line"></div>
-            
-            <h2 class="competency-title">Gain GenAI Architect Competency<br>in One Month</h2>
-            
-            <p class="description"></p>
-            
-            <div class="professional-environment">Professional Learning Environment</div>
-        </div>
-    </section>
-    
-    <!-- Main Content -->
-    <section class="content-section">
-        <div class="features-grid">
-            <div class="feature-column">
-                <div class="feature-item">Auto-detect PII Data Leakage</div>
-                <div class="feature-item">On-Demand Root Cause Analysis</div>
-                <div class="feature-item">Credit Card Fraud Prevention</div>
-                <div class="feature-item">AI-Powered Dynamic Code Generation</div>
-                <div class="feature-item">Agentic Interactive Video Analyzer</div>
-            </div>
-            
-            <div class="feature-column">
-                <div class="feature-item">5 Focused GenAI Applications</div>
-                <div class="feature-item">MIT Certified Instructor Led Program</div>
-                <div class="feature-item">Complete working AI setup on your local machine</div>
-                <div class="feature-item">Batch starts Jun 21</div>
-                <div class="feature-item">Limits to 10 participants</div>
-            </div>
-        </div>
-        
+        </section>
 
-        
-        <div class="contact-section">
-            <h3 class="contact-title">Contact Us:</h3>
-            <div class="contact-buttons">
-                <a href="https://wa.me/919686694142" class="contact-btn" target="_blank">
-                    <span class="contact-icon">📱</span>
-                    WhatsApp: +919686694142
-                </a>
-                <a href="mailto:aiarchitectclub@gmail.com" class="contact-btn">
-                    <span class="contact-icon">✉️</span>
-                    aiarchitectclub@gmail.com
-                </a>
+        <section id="digital-divide" class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#003f5c]">Challenge: Bridging the Great Digital Divide</h2>
+                <p class="mt-3 text-lg text-[#2f4b7c] max-w-3xl mx-auto">While opportunities are vast, success hinges on overcoming significant disparities in digital access between urban and rural India.</p>
             </div>
-        </div>
-    </section>
-    
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-center mb-4 text-[#003f5c]">Internet & Device Access Disparity</h3>
+                    <div class="chart-container">
+                        <canvas id="accessDisparityChart"></canvas>
+                    </div>
+                     <p class="text-center mt-4 text-sm text-gray-500">A stark contrast in access to basic digital tools highlights the primary hurdle for equitable online education.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-center mb-4 text-[#003f5c]">Internet Penetration Growth (2020-2024)</h3>
+                    <div class="chart-container">
+                        <canvas id="penetrationGrowthChart"></canvas>
+                    </div>
+                     <p class="text-center mt-4 text-sm text-gray-500">Rural internet adoption is growing rapidly, but the gap remains substantial, necessitating proactive solutions.</p>
+                </div>
+            </div>
+            <div class="mt-12 bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#ffa600]">
+                 <h3 class="text-2xl font-bold text-center text-[#003f5c] mb-4">Our Strategy to Ensure Equitable Access</h3>
+                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div>
+                        <div class="text-4xl text-[#ff7c43]">🤝</div>
+                        <h4 class="font-semibold text-lg mt-2">Strategic Partnerships</h4>
+                        <p class="text-gray-600">Collaborating with NGOs and government initiatives to provide subsidized devices and data plans.</p>
+                    </div>
+                     <div>
+                        <div class="text-4xl text-[#ff7c43]">🏘️</div>
+                        <h4 class="font-semibold text-lg mt-2">Community Hubs</h4>
+                        <p class="text-gray-600">Establishing local learning centers with shared devices and reliable internet in low-connectivity areas.</p>
+                    </div>
+                     <div>
+                        <div class="text-4xl text-[#ff7c43]">💡</div>
+                        <h4 class="font-semibold text-lg mt-2">Digital Literacy</h4>
+                        <p class="text-gray-600">Embedding training for both students and parents directly into the curriculum.</p>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <section id="ai-engine" class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#003f5c]">The AI Engine: Revolutionizing School Operations</h2>
+                <p class="mt-3 text-lg text-[#2f4b7c] max-w-3xl mx-auto">AI is not a replacement for teachers, but a powerful tool to augment their abilities and streamline the entire educational process.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-center text-[#665191] mb-4">AI for Pedagogy</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start"><span class="text-[#a05195] font-bold text-xl mr-3">🎯</span><div><strong class="text-gray-800">Personalized Learning Paths:</strong> Adapts content difficulty and pace to individual student needs in real-time.</div></li>
+                        <li class="flex items-start"><span class="text-[#a05195] font-bold text-xl mr-3">👨‍🏫</span><div><strong class="text-gray-800">Intelligent Tutoring Systems:</strong> Provides 24/7 on-demand help, simplifying complex topics through conversational AI.</div></li>
+                        <li class="flex items-start"><span class="text-[#a05195] font-bold text-xl mr-3">🎮</span><div><strong class="text-gray-800">Enhanced Engagement:</strong> Uses gamification, virtual labs, and interactive simulations to make learning immersive.</div></li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-center text-[#d45087] mb-4">AI for Administration</h3>
+                     <ul class="space-y-4">
+                        <li class="flex items-start"><span class="text-[#f95d6a] font-bold text-xl mr-3">📝</span><div><strong class="text-gray-800">Automated Assessment:</strong> Instantly grades quizzes and assignments, providing immediate feedback to students.</div></li>
+                        <li class="flex items-start"><span class="text-[#f95d6a] font-bold text-xl mr-3">⚙️</span><div><strong class="text-gray-800">Streamlined Operations:</strong> Automates attendance, scheduling, and routine communications, freeing up teacher time.</div></li>
+                        <li class="flex items-start"><span class="text-[#f95d6a] font-bold text-xl mr-3">📊</span><div><strong class="text-gray-800">Data-Driven Insights:</strong> Analyzes student performance to identify at-risk learners and inform teaching strategies.</div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-gray-800 text-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-center text-white mb-6">Our Ethical AI Framework</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div>
+                        <div class="text-4xl text-[#ffa600]">🛡️</div>
+                        <h4 class="font-semibold text-lg mt-2">Data Privacy & Security</h4>
+                        <p class="text-gray-300">Strict compliance with regulations and robust encryption to protect all student data.</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl text-[#ffa600]">⚖️</div>
+                        <h4 class="font-semibold text-lg mt-2">Bias Mitigation & Fairness</h4>
+                        <p class="text-gray-300">Continuously auditing algorithms to ensure equitable and inclusive outcomes for all learners.</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl text-[#ffa600]">👤</div>
+                        <h4 class="font-semibold text-lg mt-2">Human Oversight</h4>
+                        <p class="text-gray-300">Ensuring all critical decisions are reviewed by human educators, who retain pedagogical leadership.</p>
+                    </div>
+                     <div>
+                        <div class="text-4xl text-[#ffa600]">🎓</div>
+                        <h4 class="font-semibold text-lg mt-2">Teacher AI Literacy</h4>
+                        <p class="text-gray-300">Comprehensive training to empower teachers to use AI tools effectively and ethically.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gig-teachers" class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#003f5c]">The Human Touch: A New Model for Teachers</h2>
+                <p class="mt-3 text-lg text-[#2f4b7c] max-w-3xl mx-auto">Attracting and retaining top talent requires an innovative approach to compensation, development, and community for our gig-based educators.</p>
+            </div>
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-center mb-4 text-[#003f5c]">The Power of Performance-Based Pay</h3>
+                    <div class="chart-container">
+                        <canvas id="satisfactionChart"></canvas>
+                    </div>
+                    <p class="text-center mt-4 text-sm text-gray-500">Data shows that tying compensation to performance boosts motivation and loyalty among freelance professionals.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                     <h3 class="text-xl font-bold text-center text-[#003f5c] mb-6">Innovative Compensation Models</h3>
+                     <ul class="space-y-3">
+                         <li class="p-3 bg-blue-50 rounded-md"><strong>Tiered Pay:</strong> Based on teacher experience and ratings.</li>
+                         <li class="p-3 bg-blue-50 rounded-md"><strong>Performance Bonuses:</strong> For exceptional student outcomes.</li>
+                         <li class="p-3 bg-blue-50 rounded-md"><strong>Demand-Based Pricing:</strong> For high-demand subjects or time slots.</li>
+                         <li class="p-3 bg-blue-50 rounded-md"><strong>PD Reimbursements:</strong> Incentives for skill development.</li>
+                         <li class="p-3 bg-blue-50 rounded-md"><strong>Subscription Models:</strong> To provide more predictable income streams.</li>
+                     </ul>
+                </div>
+            </div>
+            <div class="mt-12 bg-white p-8 rounded-lg shadow-lg border-t-4 border-[#ff7c43]">
+                 <h3 class="text-2xl font-bold text-center text-[#003f5c] mb-4">Ensuring Quality at Scale</h3>
+                 <div class="flex flex-col md:flex-row justify-center items-center">
+                    <div class="text-center p-4">
+                        <div class="text-2xl font-bold text-[#f95d6a] bg-red-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2">1</div>
+                        <h4 class="font-semibold">Rigorous Vetting</h4>
+                    </div>
+                    <div class="flow-arrow hidden md:flex">→</div>
+                    <div class="text-center p-4">
+                        <div class="text-2xl font-bold text-[#d45087] bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2">2</div>
+                        <h4 class="font-semibold">AI-Driven PD</h4>
+                    </div>
+                    <div class="flow-arrow hidden md:flex">→</div>
+                    <div class="text-center p-4">
+                        <div class="text-2xl font-bold text-[#a05195] bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2">3</div>
+                        <h4 class="font-semibold">Continuous Feedback</h4>
+                    </div>
+                     <div class="flow-arrow hidden md:flex">→</div>
+                     <div class="text-center p-4">
+                        <div class="text-2xl font-bold text-[#665191] bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2">4</div>
+                        <h4 class="font-semibold">Virtual Community</h4>
+                    </div>
+                 </div>
+                 <p class="text-center mt-4 text-sm text-gray-500">A structured process from onboarding to ongoing support ensures high-quality instruction and combats teacher isolation.</p>
+            </div>
+        </section>
+
+        <section id="regulatory" class="mb-20">
+             <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#003f5c]">Navigating the Path to Legitimacy</h2>
+                <p class="mt-3 text-lg text-[#2f4b7c] max-w-3xl mx-auto">A "no physical campus" model requires a strategic approach to accreditation in India's current regulatory environment.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-center text-[#003f5c] mb-6">K-12 Accreditation Pathway Comparison</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="border-4 border-red-300 rounded-lg p-6 text-center bg-red-50">
+                        <h4 class="text-xl font-bold text-red-800">CBSE Affiliation</h4>
+                        <div class="text-6xl my-4">❌</div>
+                        <p class="font-semibold text-red-700">Not Viable</p>
+                        <p class="text-gray-600 mt-2">Mandates substantial physical infrastructure, including specific land area and classroom sizes, making it unsuitable for a purely online model.</p>
+                    </div>
+                     <div class="border-4 border-green-300 rounded-lg p-6 text-center bg-green-50">
+                        <h4 class="text-xl font-bold text-green-800">NIOS Affiliation</h4>
+                        <div class="text-6xl my-4">✅</div>
+                        <p class="font-semibold text-green-700">The Recommended Path</p>
+                        <p class="text-gray-600 mt-2">A government-recognized board designed for flexible distance learning, with certifications widely accepted for higher education and employment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="text-center pt-8 border-t border-gray-300">
+            <p class="text-gray-600">This infographic presents a conceptual blueprint based on the report "Designing a Future-Forward Online School in India."</p>
+        </footer>
+
+    </main>
     <script>
-        function celebrate() {
-            // Create celebration effect
-            const sphere = document.querySelector('.ai-sphere-logo');
-            const originalAnimation = sphere.style.animation;
-            sphere.style.animation = 'float 0.3s ease-in-out 5';
-            
-            // Reset animation after celebration
-            setTimeout(() => {
-                sphere.style.animation = originalAnimation;
-            }, 1500);
-            
-            // Add confetti effect
-            createConfetti();
-            
-            // Add energy burst effect
-            createEnergyBurst();
-        }
-        
-        function createConfetti() {
-            for (let i = 0; i < 50; i++) {
-                const confetti = document.createElement('div');
-                confetti.style.position = 'fixed';
-                confetti.style.left = Math.random() * 100 + 'vw';
-                confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
-                confetti.style.opacity = Math.random();
-                confetti.style.fontSize = Math.random() * 20 + 10 + 'px';
-                confetti.innerHTML = ['🎉', '🎊', '⭐', '💫', '✨'][Math.floor(Math.random() * 5)];
-                confetti.style.animation = 'fall 3s linear forwards';
-                document.body.appendChild(confetti);
-                
-                setTimeout(() => {
-                    confetti.remove();
-                }, 3000);
+        function wrapLabel(str, maxLen) {
+            if (str.length <= maxLen) {
+                return str;
             }
-        }
-        
-        function createEnergyBurst() {
-            const sphere = document.querySelector('.ai-sphere-logo');
-            const rect = sphere.getBoundingClientRect();
-            const centerX = rect.left + rect.width / 2;
-            const centerY = rect.top + rect.height / 2;
-            
-            for (let i = 0; i < 20; i++) {
-                const particle = document.createElement('div');
-                particle.style.position = 'fixed';
-                particle.style.left = centerX + 'px';
-                particle.style.top = centerY + 'px';
-                particle.style.width = '4px';
-                particle.style.height = '4px';
-                particle.style.borderRadius = '50%';
-                particle.style.background = `hsl(${Math.random() * 60 + 180}, 70%, 60%)`;
-                particle.style.pointerEvents = 'none';
-                particle.style.zIndex = '1000';
-                
-                const angle = (i / 20) * Math.PI * 2;
-                const distance = 100 + Math.random() * 50;
-                const endX = centerX + Math.cos(angle) * distance;
-                const endY = centerY + Math.sin(angle) * distance;
-                
-                particle.style.animation = `energyBurst 1s ease-out forwards`;
-                particle.style.setProperty('--endX', endX + 'px');
-                particle.style.setProperty('--endY', endY + 'px');
-                
-                document.body.appendChild(particle);
-                
-                setTimeout(() => {
-                    particle.remove();
-                }, 1000);
+            const words = str.split(' ');
+            let currentLine = '';
+            const lines = [];
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLen && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
             }
+            if (currentLine.length > 0) {
+                lines.push(currentLine);
+            }
+            return lines;
         }
         
-        // Smooth scrolling for internal links
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add scroll animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const sharedTooltipOptions = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    backgroundColor: '#003f5c',
+                    titleFont: { size: 14, weight: 'bold' },
+                    bodyFont: { size: 12 },
+                    padding: 10,
+                    cornerRadius: 5,
+                    displayColors: true
+                },
+                legend: {
+                    labels: {
+                        color: '#2f4b7c',
+                        font: {
+                           size: 14
+                        }
                     }
-                });
-            }, observerOptions);
-            
-            document.querySelectorAll('.feature-column, .highlight-section, .contact-section').forEach(el => {
-                observer.observe(el);
-            });
+                }
+            }
+        };
+
+        const accessDisparityCtx = document.getElementById('accessDisparityChart').getContext('2d');
+        const accessDisparityChart = new Chart(accessDisparityCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Internet Access (% Households)', 'Device Access (% Students)'],
+                datasets: [
+                    {
+                        label: 'Rural',
+                        data: [24, 45],
+                        backgroundColor: '#ff7c43',
+                        borderColor: '#f95d6a',
+                        borderWidth: 2,
+                        borderRadius: 5
+                    },
+                    {
+                        label: 'Urban',
+                        data: [66, 85],
+                        backgroundColor: '#665191',
+                        borderColor: '#2f4b7c',
+                        borderWidth: 2,
+                        borderRadius: 5
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: { color: '#2f4b7c' }
+                    },
+                    x: {
+                        ticks: { color: '#2f4b7c', font: { weight: '600' } }
+                    }
+                },
+                ...sharedTooltipOptions
+            }
         });
-        
-        // Add hover sound effect (optional)
-        document.querySelectorAll('.feature-item, .contact-btn, .highlight-item').forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                // You can add sound effects here if needed
-                item.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-            });
+
+        const penetrationGrowthCtx = document.getElementById('penetrationGrowthChart').getContext('2d');
+        const penetrationGrowthChart = new Chart(penetrationGrowthCtx, {
+            type: 'line',
+            data: {
+                labels: ['2020', '2024'],
+                datasets: [
+                    {
+                        label: 'Rural Internet Penetration (%)',
+                        data: [59, 78],
+                        borderColor: '#d45087',
+                        backgroundColor: 'rgba(212, 80, 135, 0.2)',
+                        fill: true,
+                        tension: 0.1
+                    },
+                    {
+                        label: 'Urban Internet Penetration (%)',
+                        data: [77, 90],
+                        borderColor: '#003f5c',
+                        backgroundColor: 'rgba(0, 63, 92, 0.2)',
+                        fill: true,
+                        tension: 0.1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        ticks: { color: '#2f4b7c' }
+                    },
+                     x: {
+                        ticks: { color: '#2f4b7c', font: { weight: '600' } }
+                    }
+                },
+                ...sharedTooltipOptions
+            }
+        });
+
+        const satisfactionCtx = document.getElementById('satisfactionChart').getContext('2d');
+        const satisfactionChart = new Chart(satisfactionCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['More Satisfied with Perf. Pay', 'Other'],
+                datasets: [{
+                    label: 'Freelancer Satisfaction',
+                    data: [60, 40],
+                    backgroundColor: ['#ffa600', '#003f5c'],
+                    borderColor: ['#ffffff'],
+                    borderWidth: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                             color: '#2f4b7c',
+                             font: {
+                                size: 14
+                             }
+                        }
+                    },
+                    tooltip: {
+                         callbacks: {
+                            title: tooltipTitleCallback
+                        },
+                        backgroundColor: '#003f5c',
+                        padding: 10,
+                        cornerRadius: 5
+                    },
+                    title: {
+                        display: true,
+                        text: 'Upwork Freelancer Study',
+                        color: '#665191',
+                        font: {
+                            size: 16
+                        }
+                    }
+                }
+            }
         });
     </script>
 </body>
